@@ -24,13 +24,13 @@ import org.springframework.context.annotation.Configuration;
 public class XxlJobConfig {
     private final XxlJobProps xxlJobProps;
 
-    @Bean(initMethod = "start", destroyMethod = "destroy")
+    @Bean()
     public XxlJobSpringExecutor xxlJobExecutor() {
         log.info(">>>>>>>>>>> xxl-job config init.");
         XxlJobSpringExecutor xxlJobSpringExecutor = new XxlJobSpringExecutor();
         xxlJobSpringExecutor.setAdminAddresses(xxlJobProps.getAdmin().getAddress());
         xxlJobSpringExecutor.setAccessToken(xxlJobProps.getAccessToken());
-        xxlJobSpringExecutor.setAppName(xxlJobProps.getExecutor().getAppName());
+        xxlJobSpringExecutor.setAppname(xxlJobProps.getExecutor().getAppName());
         xxlJobSpringExecutor.setIp(xxlJobProps.getExecutor().getIp());
         xxlJobSpringExecutor.setPort(xxlJobProps.getExecutor().getPort());
         xxlJobSpringExecutor.setLogPath(xxlJobProps.getExecutor().getLogPath());
