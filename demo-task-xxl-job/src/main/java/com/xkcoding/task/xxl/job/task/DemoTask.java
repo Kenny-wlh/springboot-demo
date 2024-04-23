@@ -30,4 +30,5 @@ public class DemoTask{
         log.info("demo task run at : {}", DateUtil.now());
         return RandomUtil.randomInt(1, 11) % 2 == 0 ? SUCCESS : FAIL;
     }
+
 }
