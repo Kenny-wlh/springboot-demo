@@ -25,7 +25,7 @@
     <module>demo-orm-mybatis-mapper-page</module>
     <module>demo-orm-mybatis-plus</module>
     <module>demo-orm-beetlsql</module>
-    <module>demo-upload</module>
+    <module>demo-upload-download</module>
     <module>demo-cache-redis</module>
     <module>demo-cache-ehcache</module>
     <module>demo-email</module>
