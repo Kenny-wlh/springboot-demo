@@ -26,7 +26,7 @@ public class DemoTask{
     @XxlJob("demoJobHandler")
     public ReturnT<String> demoJobHandler() {
         // 可以动态获取传递过来的参数，根据参数不同，当前调度的任务不同
-      String jobParam = XxlJobHelper.getJobParam();log.info("【param】= {}", jobParam);
+        String jobParam = XxlJobHelper.getJobParam();log.info("【param】= {}", jobParam);
         log.info("demo task run at : {}", DateUtil.now());
         return RandomUtil.randomInt(1, 11) % 2 == 0 ? SUCCESS : FAIL;
     }
